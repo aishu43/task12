@@ -1,0 +1,227 @@
+ackage com.examplehr;
+
+public class Employee {
+
+	
+	int id;
+	double salary;
+	String name;
+	
+	
+	//constructor 
+	
+          public Employee(int id, double salary, String name) {
+		// TODO Auto-generated constructor stub
+	
+     //this.id mean by same variable name will specify using (this.id).
+
+	     this.id=id;
+	      this.salary=salary;	      this.name=name;
+	}
+	
+	
+public void printname() {
+	
+	System.out.println("Name :"+name);
+	
+}
+
+public void printsalary() {
+	
+	System.out.println("Salary :"+salary);
+	}
+
+
+public void printid() {
+	
+	System.out.println("ID :"+id);
+	}
+
+//setter
+
+public void setter( int i, double s, String n)
+{
+      id=i;
+      salary=s;
+      name=n;
+}
+}
+
+
+
+package com.examplehrtest;
+
+import com.examplehr.Employee;
+
+public class Empoyeetest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		Employee obj = new Employee(1, 10000, "jeni");
+		
+		//obj.setter(1, 100, "jeni");
+		
+		
+		obj.printname();
+		obj.printsalary();
+	    obj.printid();
+	}
+
+}
+
+
+
+O/P
+Name :jeni
+Salary :10000.0
+ID :1
+
+
+package NewArray;
+
+import java.util.ArrayList;
+
+public class list_to_array {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+		ArrayList<String>  list = new ArrayList<String>();
+	      list.add("jeni");
+	      list.add("bavi");
+	      list.add("sumi");
+
+	      System.out.println(" list Name : "+  list);
+	      String[] Array = new String[list.size()];
+	      list.toArray(Array);
+
+	      for(int i=0; i<Array.length; i++){
+	         System.out.println("Specified Name "+  i  +" : "+Array[i]);
+	      }
+	}
+
+}
+
+o/p
+
+list Name : [jeni, bavi, sumi]
+Specified Name 0 : jeni
+Specified Name 1 : bavi
+Specified Name 2 : sumi
+
+
+
+package NewArray;
+
+import java.util.ArrayList;
+
+public class remove_array_elements {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+		
+		ArrayList<String> list = new ArrayList<>();
+		  
+        // Adding elements of list
+        list.add("welcome");
+        list.add("Guvi");
+       
+  
+        // printing initial value ArrayList
+        System.out.println("ArrayList: " + list);
+  
+        // print size of ArrayList
+        System.out.println("Size of ArrayList = " + list.size());
+  
+        // remove all elements using clear() method
+        list.clear();
+  
+        // printing ArrayList
+        System.out.println("\nAfter clear\n" + "ArrayList: " + list);
+  
+        // print size of ArrayList after clear list
+        System.out.println("Size of ArrayList = " + list.size());
+	}
+
+}
+
+o/p
+
+ArrayList: [welcome, Guvi]
+Size of ArrayList = 2
+
+After clear
+ArrayList: []
+Size of ArrayList = 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package maptree;
+
+
+import java.util.Map;
+import java.util.TreeMap;
+
+
+public class hashmap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Map<String, Object> obj = new TreeMap<String, Object>();//(straight order)//treemap not allowed null,null value
+		
+		obj.put("EMP ID1", "AISHU");
+		obj.put("EMP ID2", "JENI");
+		obj.put("EMP ID3", "BAVI");
+		System.out.println(obj);
+	}
+
+}
+
+O/P
+{EMP ID1=AISHU, EMP ID2=JENI, EMP ID3=BAVI}
+
